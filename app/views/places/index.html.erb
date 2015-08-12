@@ -1,2 +1,14 @@
-<h1> Welcome <h1/>
-	
+<% @places.each do |place | %>
+	<div> 
+		<h1> <%= place.name %> </h1><br /> 
+		<i>  <%= place.adress %> </i><br /> 
+		<p>  <%= place.discription %> </p><br /> 
+	</div> 
+
+
+
+
+	<hr/> 
+
+
+<% end %> 
