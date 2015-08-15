@@ -1,5 +1,6 @@
 Nomster::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+   config.action_mailer.default_url_options = { :host => 'https://nomster-bon-jias.herokuapp.com' }
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -27,3 +28,5 @@ Nomster::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 end
+
+

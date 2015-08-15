@@ -26,14 +26,14 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-          <div="row">
+          
             <li>
           <%= link_to new_place_path do %>
           <i class="glyphicon glyphicon-plus-sign"></i>
           New Place
           <% end %>
           </li>
-          </div>
+          
         </ul>
         <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Link</a></li>
@@ -42,6 +42,15 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+<% if notice.present? %>
+<p class="alert alert-info"><%= notice %></p>
+<% end %>
+
+ <% if alert.present? %>
+<p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
 
 <%= yield %>
 
