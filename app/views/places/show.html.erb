@@ -4,17 +4,14 @@
 <br/><br/>
 <p><%= @place.description %></p>
 
- <style>
-    #map-canvas {
-        height: 300px;
-              }
-  </style>
+ 
+<% if @place.latitude.present? && @place.longitude.present? %>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
   <script>
     function initialize() {
-      var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+      var myLatlng = new google.maps.LatLng(<%= @place.latitude %>,<%= @place.longitude %>);
       var mapOptions = {
-        zoom: 4,
+        zoom: 12,
         center: myLatlng
       };
       var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
@@ -30,12 +27,7 @@
 
   </script>
 
-  <style>
-  #map-canvas {
-    height: 300px;
-  }
-</style>
-  
+  <div id="map-canvas"></div>
 
 <div class="pull-right">
 	<% if current_user && current_user == @place.user %>
@@ -46,3 +38,4 @@
      
   </div>
 </div>
+<% end %>
