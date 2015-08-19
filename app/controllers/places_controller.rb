@@ -3,7 +3,7 @@ class PlacesController < ApplicationController
 
 
 	def index
-		@places = Place.all.paginate(page: params[:page],per_page: 2)
+		@places = Place.all.paginate(:page => params[:page], :per_page => 2).order('created_at ASC')
 		end
 
 
@@ -23,7 +23,15 @@ class PlacesController < ApplicationController
 
 		def edit
 			@place = Place.find(params[:id])
+
 		end 
+
+		def update
+		@place = Place.find(params[:id])
+  		@place.update_attributes(place_params)
+  		redirect_to root_path
+		end
+
 
 		private
 
