@@ -72,3 +72,18 @@ h8{
 .clear {
     clear: both;
 }
+
+.booyah-box-2 {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: blue;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top:10px;
+  margin-bottom:15px;
+  padding:20px;
+  position: fixed;
+    bottom: 0;
+
+}
