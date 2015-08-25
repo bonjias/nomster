@@ -51,6 +51,11 @@
 </button>
 </div>
 
+<%= simple_form_for @photo, :url => 'place_photos_path(@photo),' do |f| %>
+  <%= f.input :caption %>
+  <%= f.input :place_id %>
+  <%= f.submit "Add a Photo", :class => 'btn btn-primary' %>
+<% end %>
 
 <div class="clear"></div>
 
